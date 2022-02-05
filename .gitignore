@@ -27,4 +27,4 @@ hs_err_pid*
 /.idea/modules.xml
 /.idea/runConfigurations.xml
 /.idea/vcs.xml
-/src/.idea/
+*/src/.idea/
