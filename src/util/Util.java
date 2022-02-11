@@ -3,6 +3,8 @@ package util;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 public class Util {
     public static String lerTextoUsuario() {
@@ -36,5 +38,10 @@ public class Util {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    public static String formataDouble(double num) {
+        NumberFormat formatter = new DecimalFormat("#0.00");
+        return formatter.format(num);
     }
 }
