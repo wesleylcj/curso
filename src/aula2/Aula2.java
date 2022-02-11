@@ -6,10 +6,12 @@ public class Aula2 {
 
     public static void main(String[] args) {
 
-        codigoAbastecimento();
-        codigoIdadae();
-        codigoMesaeCadeira();
 
+        //codigoAbastecimento();
+        //codigoIdadae();
+        //codigoMesaeCadeira();
+        // porcentagemSucos();
+        //  exercicioNumeros();
     }
 
     private static void codigoAbastecimento() {
@@ -22,7 +24,7 @@ public class Aula2 {
 
         double litros = abastecimento / gasolina;
 
-        System.out.println("total:" + litros);
+        System.out.println("total:" + Util.formataDouble(litros) + "L");
         System.out.println("fim do calculo");
     }
 
@@ -56,5 +58,26 @@ public class Aula2 {
         }
     }
 
+
+    private static void porcentagemSucos() {
+        System.out.println("Numero de litros:");
+        float informeUsuario = Util.letNumeroInteiroUsuario();
+        float agua = (informeUsuario / 10) * 8;
+        System.out.println("quantidade de agua:" + agua);
+        float suco = informeUsuario - agua;
+        System.out.println("quantidade de suco:" + suco);
+    }
+
+
+    private static void exercicioNumeros() {
+        System.out.println("informe 2 numeros na sequencia:");
+        int primeiroNumero = Util.letNumeroInteiroUsuario();
+        int segundoNumero = Util.letNumeroInteiroUsuario();
+        if (primeiroNumero > segundoNumero) {
+            System.out.println("Maior numero:" + primeiroNumero);
+        } else {
+            System.out.println("Maior numero:" + segundoNumero);
+        }
+    }
 
 }
