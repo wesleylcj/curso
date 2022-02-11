@@ -8,7 +8,10 @@ public class Aula3 {
         // >= maior ou igual
         // <= menor ou igual
         // && verifica se 2 condições são verdadeiras
-        // true && true
+        // true && true = true, false && true = false
+        // || verifica se uma de duas condições é verdadeira, um ou outro
+        // false || true = true; false || false = false; true || true = true
+
         int x = 10;
         int y = 20;
         boolean condicaoX = x >= 10;
