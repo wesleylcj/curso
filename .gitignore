@@ -28,3 +28,4 @@ hs_err_pid*
 /.idea/runConfigurations.xml
 /.idea/vcs.xml
 .idea/
+out/
