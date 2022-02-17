@@ -7,6 +7,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 public class Util {
+
     public static String lerTextoUsuario() {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));

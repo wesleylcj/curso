@@ -7,11 +7,13 @@ public class Aula2 {
     public static void main(String[] args) {
 
 
-        //codigoAbastecimento();
-        //codigoIdadae();
-        //codigoMesaeCadeira();
-        // porcentagemSucos();
-        //  exercicioNumeros();
+
+
+         codigoAbastecimento();
+         codigoIdadae();
+         codigoMesaeCadeira();
+         porcentagemSucos();
+         exercicioNumeros();
     }
 
     private static void codigoAbastecimento() {

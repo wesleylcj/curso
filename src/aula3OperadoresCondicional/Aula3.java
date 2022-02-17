@@ -11,6 +11,10 @@ public class Aula3 {
         // true && true = true, false && true = false
         // || verifica se uma de duas condições é verdadeira, um ou outro
         // false || true = true; false || false = false; true || true = true
+        // not ! , inverte o valor de uma variavel do tipo boolean
+
+        boolean estaChovendo = false;
+        System.out.println("esta chovendo = " + !estaChovendo);
 
         int x = 10;
         int y = 20;
