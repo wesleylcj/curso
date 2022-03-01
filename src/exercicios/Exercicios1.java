@@ -4,6 +4,9 @@ public class Exercicios1 {
 
     public static void main(String[] args) {
 
+      //investigarCrime();
+        //maiorNumero();
+
     }
 
      /*
@@ -22,12 +25,12 @@ public class Exercicios1 {
     Caso contrário, ele será classificado como “Inocente“.
     */
     static void investigarCrime(){
-
+        System.out.println("iniciando investigar crime");
     }
 
     // O usuário irá informar dois números e o programa irá imprimir o maior destes dois números
     static void maiorNumero(){
-
+        System.out.println("iniciando maior numero");
     }
 
     /*
