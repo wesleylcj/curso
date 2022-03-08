@@ -16,15 +16,7 @@ public class Principal {
         System.out.println(" Saldo:R$"+saldo);
 
 
-
-
-
-
-
-
-    }
-}
-/* String viatura = "viatura";
+        String viatura = "viatura";
         System.out.println(" insira o prefixo:");
         String prefixo = Util.lerTextoUsuario();
         viatura = viatura + " " + "baixada";
@@ -32,4 +24,10 @@ public class Principal {
         viatura = viatura + prefixo;
         System.out.print(viatura);
 
-    */
+
+
+
+
+    }
+}
+
