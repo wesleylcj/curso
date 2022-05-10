@@ -184,7 +184,7 @@ public class Exercicios1 {
      5 - Usando while faça um programa que leia a renda de todos os integrantes de uma familia,
       calcule e imprima a renda familiar per capita.
     */
-        static void calcularRendaPerCapita () {
+        static void calcularRendaPerCapita () {  /* comentando git */
 
         }
 
