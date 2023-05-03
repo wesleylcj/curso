@@ -10,7 +10,10 @@ public class Exercicios1 {
         //maiorNumero();
         //posistivoNegativoParImpar();
         //diaDaSemana();
-        calcularMedia();
+        //calcularMedia();
+        //imprimirCracha();
+        calcularRendaPerCapita();
+        //calculoArea();
     }
 
     /*
@@ -70,7 +73,6 @@ public class Exercicios1 {
 
         } else if (contador == 3 || contador == 4) {
             System.out.println("cumplice");
-            diaDaSemana();
         } else if (contador == 5) {
             System.out.println("culpado");
         } else {
@@ -110,7 +112,6 @@ public class Exercicios1 {
             System.out.println("numero par");
         } else {
             System.out.println("numero impar");
-
         }
     }
 
@@ -139,27 +140,28 @@ public class Exercicios1 {
         } else
             System.out.println("numero invalido");
     }
+
     /*
      Faça um programa para calcular a média ponderada de um aluno.
      A prova 1 terá peso 1 a p2 peso 2, P3 peso 3 e P4 peso 4.
      O aluno deverá informar as notas das 4 provas e o programa deverá mostrar qual é a média e se está aprovado ou reprovado.
      A média de aprovação é 6.
      */
-        static void calcularMedia () {
-            System.out.println("informe a nota da p1;");
-            double notaP1=Util.lerNumeroComVirgulaUsuario();
-            System.out.println("informe a nota da P2");
-            double notaP2=Util.lerNumeroComVirgulaUsuario();
-            System.out.println("informe a nota da p3");
-            double notaP3=Util.lerNumeroComVirgulaUsuario();
-            System.out.println("informe a nota da p4");
-            double notaP4=Util.lerNumeroComVirgulaUsuario();
+    static void calcularMedia() {
+        System.out.println("informe a nota da p1;");
+        double notaP1 = Util.lerNumeroComVirgulaUsuario();
+        System.out.println("informe a nota da P2");
+        double notaP2 = Util.lerNumeroComVirgulaUsuario();
+        System.out.println("informe a nota da p3");
+        double notaP3 = Util.lerNumeroComVirgulaUsuario();
+        System.out.println("informe a nota da p4");
+        double notaP4 = Util.lerNumeroComVirgulaUsuario();
 
-            double calcularNotas=(notaP1*1+notaP2*2+notaP3*3+notaP4*4);
-            double media = (calcularNotas/10);
-            System.out.println("calculo das notas:"+Util.formataDouble(media));
+        double calcularNotas = (notaP1 * 1 + notaP2 * 2 + notaP3 * 3 + notaP4 * 4);
+        double media = (calcularNotas / 10);
+        System.out.println("calculo das notas:" + Util.formataDouble(media));
 
-        }
+    }
 
     /*
      - Num evento os participantes receberão um crachá com um número x por ordem de chegada no seguinte formato "[x]".
@@ -169,31 +171,109 @@ public class Exercicios1 {
     [2]
     [3]
      */
-        static void imprimirCracha () {
+    static void imprimirCracha() {
+        int i = 0;
+
+        while (i >= 0) {
+            System.out.println("Nome do usuario:");
+            String nomeUsuario = Util.lerTextoUsuario();
+            i++;
+            System.out.println(nomeUsuario + "_cracha_" + i);
 
         }
+    }
 
     /*
     4 - Faça um programa que leia um número inteiro do usuário e usando while imprima a sua tabuada.
     */
-        static void calcularTabuada () {
+    static void calcularTabuada() {
 
-        }
+    }
 
     /* DIFICIL
      5 - Usando while faça um programa que leia a renda de todos os integrantes de uma familia,
       calcule e imprima a renda familiar per capita.
     */
-        static void calcularRendaPerCapita () {  /* comentando git */
+    static void calcularRendaPerCapita() {
+        boolean repetir = true;
+        double rendaBruta = 0;
+        int numeroPessoas = 0;
+        double rendaPercapta;
 
+        while (repetir) {
+
+            System.out.println("Informe o nome do integrante da familia, ou finalizar para renda percapta:");
+            String nomeDoFamiliar = Util.lerTextoUsuario();
+            if (nomeDoFamiliar.equalsIgnoreCase("finalizar")) {
+                repetir = false;
+
+            } else {
+                String pessoa = nomeDoFamiliar;
+                System.out.println("Informe o salario:");
+                double salario = Util.lerNumeroComVirgulaUsuario();
+
+                numeroPessoas = numeroPessoas + 1;
+
+                rendaBruta = rendaBruta + salario;
+            }
         }
+
+        rendaPercapta = rendaBruta / numeroPessoas;
+        System.out.println("A renda percapta da sua familia e: " + rendaPercapta + "por pessoa");
+    }
+
 
     /*DIFICIL
    Faça um programa que calcule quantos metros quadrados tem uma casa e imprima a sua área.
    O usuário deverá informar o nome, a largura e o comprimento de cada cômodo, podendo informar N número de cômodos.
    O programa deverá então calcular a área de cada cômodo, imprimir as áreas calculadas de cada cômodo e a área total.
    */
-        static void calculoArea () {
+    static void calculoArea() {
+        //variavel para controlar o while
+        boolean continuar = true;
+        //variavel para acumular a area total da casa
+        double areaTotal = 0;
 
+        while (continuar) {
+            System.out.println("Informe o nome comodo que deseja medir, ou sair para encerrar");
+            String inputUsuario = Util.lerTextoUsuario();
+            //le o input do usuario se digitar 'sair' terminar o while
+
+            if (inputUsuario.equalsIgnoreCase("sair")) {
+                //muda a variavel de controle do while para falso para sair do while
+                continuar = false;
+
+            } else {
+                //se chegou aqui e pq o usuario digitou um comodo, calcular a area
+                String comodo = inputUsuario;
+                System.out.println("Largura:");
+                double largura = Util.lerNumeroComVirgulaUsuario();
+                System.out.println("Comprimento:");
+                double comprimento = Util.lerNumeroComVirgulaUsuario();
+                double area = (largura * comprimento);
+                //soma a area individual na area total
+                areaTotal = areaTotal + area;
+                System.out.println("A area do comodo " + comodo + " e: " + area + "m^2");
+            }
         }
+
+        System.out.println("Area total = " + areaTotal);
+
+            /*String medir = "continue";
+
+            while (medir == "continue") {
+
+                System.out.println("Informe o comodo que deseja medir:");
+                String comodo = Util.lerTextoUsuario();
+                System.out.println("Largura:");
+                double largura = Util.lerNumeroComVirgulaUsuario();
+                System.out.println("Comprimento:");
+                double comprimento = Util.lerNumeroComVirgulaUsuario();
+                double area = (largura * comprimento);
+                System.out.println( "A medida de sua area e:" + area + "m^2");
+
+            }*/
     }
+
+
+}
